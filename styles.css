@@ -81,7 +81,9 @@ body {
 }
 
 .sidebar-left {
-    line-height: 2.5;
+    height: 100vh;
+    position: sticky;
+    top: 0;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -188,7 +190,9 @@ body {
 }
 
 .icons {
+    display: flex;
     justify-self: end;
+    gap: 20px;
 }
 
 .announcement-box {
@@ -196,4 +200,26 @@ body {
     padding: 40px;
 }
 
+.trending-box {
+    display: grid;
+    padding: 40px;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 20px;
+}
+
+.sidebar-left-items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.sidebar-left-items svg {
+    flex-shrink: 0;      
+}
 
