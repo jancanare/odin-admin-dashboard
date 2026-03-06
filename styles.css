@@ -11,8 +11,8 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 8fr;
+    grid-template-columns: 240px 1fr; /* Fixed sidebar width for better control */
+    grid-template-rows: auto 1fr;    /* Header takes only what it needs */
     min-height: 100vh;
 }
 
@@ -54,6 +54,8 @@ body {
 .header-bottom {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Center buttons with the avatar */
+    padding-bottom: 20px;
 }
 
 .header-bottom-left {
@@ -68,6 +70,11 @@ body {
 .greetings {
     display: flex;
     flex-direction: column;
+}
+
+.greetings div:last-child {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .header-bottom-right {
@@ -203,6 +210,7 @@ body {
 .trending-box {
     display: grid;
     padding: 40px;
+    gap: 15px;
 }
 
 .trending-item {
@@ -223,3 +231,66 @@ body {
     flex-shrink: 0;      
 }
 
+.button {
+    background-color: #1f2937;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 8px 4px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #4a90e2; /* Or any brand color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .announcement-box, .trending-box {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    padding: 25px; /* Adjusted from 40px for better content density */
+}
+
+.announcement-box div:not(:last-child) {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f5f9; /* Light grey background */
+    padding: 5px 15px;
+    border-radius: 20px;       /* Rounded ends */
+    width: 80%;                /* Responsive width */
+    max-width: 600px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;             /* Removes the blue ring on click */
+    margin-left: 10px;
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.search-bar label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
